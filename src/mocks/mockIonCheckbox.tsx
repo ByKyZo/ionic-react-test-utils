@@ -11,6 +11,7 @@ export const mockIonCheckbox: React.FC<{
   return (
     <input
         type="checkbox"
+        role="toggle"
         onClick={e => {
           onIonChange(new CustomEvent('ionChange', { detail: { checked: e.currentTarget.checked } }));
         }}
@@ -20,7 +21,7 @@ export const mockIonCheckbox: React.FC<{
         onBlur={() => {
           onIonBlur(new CustomEvent('ionBlur'))
         }}
-        role="toggle" {...rest}
+        {...rest}
     />
   );
 };
